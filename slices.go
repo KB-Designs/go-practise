@@ -1,4 +1,4 @@
-package main
+/*package main
 import ("fmt")
 
 func main (){
@@ -11,4 +11,16 @@ func main (){
 
 	fmt.Println(myslice)
 	fmt.Println(myslice1)
+}*/
+
+package main 
+import "fmt"
+
+func main(){
+	myslice := []int {33,44,55,66,77,88,99}
+
+	for idx,val:=range myslice {
+		fmt.Println("%v\t%v\n", idx,val)
+	}
+	
 }
