@@ -1,26 +1,31 @@
 package main
-import ("fmt")
 
-func main(){
+import "fmt"
 
-	day :=20
-
-	switch day {
-	case 1:
-		fmt.Println("Monday")
-	case 2:
-		fmt.Println("Tuesday")
-	case 3:
-		fmt.Println("Wednesday")
-	case 4:
-		fmt.Println("Thursday")
-	case 5:
-		fmt.Println("Friday")
-	case 6:
-		fmt.Println("Saturday")	
-	case 7:
-		fmt.Println("Sunday")
+func billingCost(plan string) float64 {
+	switch plan {
+	case "basic":
+		return 10.0
+	case "pro":
+		return 20.0
+	case "enterprise":
+		return 50.0
 	default:
-		fmt.Println("Not a weekday")
+		return 0.0
 	}
+}
+
+// don't touch below this line
+
+func main() {
+	plan := "basic"
+	fmt.Printf("The cost for a %s plan is $%.2f\n", plan, billingCost(plan))
+	plan = "pro"
+	fmt.Printf("The cost for a %s plan is $%.2f\n", plan, billingCost(plan))
+	plan = "enterprise"
+	fmt.Printf("The cost for a %s plan is $%.2f\n", plan, billingCost(plan))
+	plan = "free"
+	fmt.Printf("The cost for a %s plan is $%.2f\n", plan, billingCost(plan))
+	plan = "unknown"
+	fmt.Printf("The cost for a %s plan is $%.2f\n", plan, billingCost(plan))
 }
