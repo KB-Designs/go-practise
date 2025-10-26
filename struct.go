@@ -2,14 +2,18 @@ package main
 import "main"
 
 
-	type person struct{
-		name string
-		age int 
-		job string
-		salary int
-	}
+type person struct{
+	name string
+	age int 
+	job string
+	salary int
+}
+
 func main (){
 	var person1 person
+	var person2 person
+
+	//person1
 	person1.name="Brian"
 	person1.age= 22 
 	person1.job="teacher"
