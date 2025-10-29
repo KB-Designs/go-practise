@@ -1,9 +1,12 @@
 package main
 import "fmt"
 
-func square(num int)int{
+func squareperi(num int)(int,int){
 	squared:=num*num
-	return squared
+	perimeter:=num*4
+	return squared,perimeter
+	
+	
 }
 
 func main (){
@@ -11,6 +14,7 @@ func main (){
 	fmt.Print("Enter a number\n")
 	fmt.Scan(&num2besqured)
 
-	x:=square(num2besqured)
-	fmt.Println(x)
+	squaredsquare,perimetersquare:= squareperi(num2besqured)
+
+	fmt.Printf("square : %v\nperimeter : %v\n",squaredsquare,perimetersquare)
 }
