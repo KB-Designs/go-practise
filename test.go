@@ -1,16 +1,13 @@
 package main 
 import "fmt"
 
-func radius()(int int){
-	var x int=2
-	var y int=4
-	return x,y
+func test()(x int,y int){
+	return
 }
 
 func main (){
-	r1,r2:=radius()
+	a,b:=test()
 
-	fmt.Println(r1)
-	fmt.Println(r2)
-
+	fmt.Println(a)
+	fmt.Println(b)
 }
