@@ -1,25 +1,23 @@
 package main
 import "fmt"
 
-func add(x,y int)int{
-	return x+y
+// arithmetic function for addition
+func add(x, y int) int {
+    return x + y
 }
 
-func multiply(x,y int)int{
-	return x*y
+// arithmetic function for multiplication
+func multiply(x, y int) int {
+    return x * y
 }
 
-func maths(a,b,c int,arith func(int,int)int) int{
-	firstresult:=a+b
-	secondresult:=firstresult+c
-
-	return secondresult
+func aggregate(a, b, c int, arithmetic func(int, int) int) int {
+    firstResult := arithmetic(a, b)
+    secondResult := arithmetic(firstResult, c)
+    return secondResult
 }
 
-func main (){
-	answer1:=maths(2,4,6,add)
-	answer2:=maths(4,6,5,multiply)
-
-	fmt.Println(answer1)
-	fmt.Println(answer2)
+func main() {
+    fmt.Println(aggregate(2, 3, 4, add))      // (2 + 3) + 4 = 9
+    fmt.Println(aggregate(2, 3, 4, multiply)) // (2 * 3) * 4 = 24
 }

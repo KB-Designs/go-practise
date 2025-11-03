@@ -1,21 +1,25 @@
 package main 
-import "main"
+import "fmt"
 
 
-type person struct{
+type person struct {
 	name string
-	age int 
-	job string
-	salary int
+	age int
+	city string
+	grades []int
 }
 
 func main (){
-	var person1 person
-	var person2 person
+	p1:=person {"kimani",22,"nairobi",[]int{79}}
+	p1.age=23
 
-	//person1
-	person1.name="Brian"
-	person1.age= 22 
-	person1.job="teacher"
-	person1.salary=30000
+	p3:=person{
+		name:"kimani",
+		age:40,
+		city:"malaa",
+		grades:[]int{2255,66,77},
+	}
+
+	fmt.Println(p1)
+	fmt.Println(p3)
 }
