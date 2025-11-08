@@ -6,9 +6,15 @@ func main (){
 	var age int = 22
 
 	color :="white"
+	color2:="red"
 
 	fmt.Printf("I am %v, just turned %v\n", name,age)
 	fmt.Printf("name :%v, type: %T\n",name, name)
 	fmt.Printf("age :%v, type:%T\n", age,age)
 	fmt.Printf("color :%v, type:%T", color,color)
+
+	fmt.Print(color)
+	fmt.Print(color2)
+	fmt.Println(color)
+	fmt.Println(color2)
 }
