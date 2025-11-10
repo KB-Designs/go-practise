@@ -22,8 +22,11 @@ func (ptr *personlist) add(name,city string ,age int){
 
 func main(){
 	var person1 personlist
+	var person2 personlist
 
 	person1.add("kimani","ruiru",22)
+	person2.add("brian","thika",33)
 
-	fmt.Println(person1)
+	fmt.Println(personlist)
+
 }
